@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'maven-publish'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'maven-publish'
 
 group="com.zynkware"
 
@@ -71,7 +71,7 @@ dependencies {
 
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 
-    implementation 'com.github.zynkware:Tiny-OpenCV:4.4.0-4'
+    implementation 'com.quickbirdstudios:opencv:4.5.3.0'
 
     implementation "androidx.camera:camera-camera2:1.2.3"
     implementation "androidx.camera:camera-lifecycle:1.2.3"
@@ -96,14 +96,14 @@ task androidSourcesJar(type: Jar) {
 }
 
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = libraryGroup
-                artifactId = libraryArtifact
-                version = libraryVersionName
-            }
-        }
-    }
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = libraryGroup
+//                artifactId = libraryArtifact
+//                version = libraryVersionName
+//            }
+//        }
+//    }
 }
